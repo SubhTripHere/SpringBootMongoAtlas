@@ -37,6 +37,7 @@ public class EmployeeController {
 
         // Printing employees to verify the output
         employees.forEach(System.out::println);
+        employees.forEach((emp)-> employeeService.saveEmployee(emp));
 
         File nfile=new File("results.json");
         // writing data to file using mapper
